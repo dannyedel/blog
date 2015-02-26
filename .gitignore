@@ -1,0 +1,9 @@
+# bundle's installed binaries
+Gemfile.lock
+vendor/
+
+# jekyll's output
+_site/
+
+# vim swap files
+.*.swp

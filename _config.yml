@@ -7,6 +7,11 @@ url: "http://yourdomain.com"
 twitter_username: jekyllrb
 github_username:  jekyll
 
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
 # Build settings
 markdown: kramdown
 permalink: pretty
