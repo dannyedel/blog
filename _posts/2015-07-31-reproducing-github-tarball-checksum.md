@@ -78,7 +78,7 @@ fc776a179fc0fb3e13f172d52fb57be44dc79a70f6ffd11ff900faca1704e972  local.tar
 fc776a179fc0fb3e13f172d52fb57be44dc79a70f6ffd11ff900faca1704e972  remote.tar
 ```
 
-Okay, so we already know the *uncompressed* of the package are bit-identical.
+Okay, so we already know the *uncompressed* contents of the package are bit-identical.
 That's good. Lets try a `.tar.gz` (compressed) file.
 
 If you run the following command repeatedly, you will notice **a different checksum
