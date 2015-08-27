@@ -107,7 +107,7 @@ To get the source of broadcom-sta and apply the patches from the BTS,
 run the following commands in a fresh, empty directory
 ([get as shellscript][patchscript]).
 
-{% gist 800a2420df423b0ba4d7 %}
+{% gist dannyedel/800a2420df423b0ba4d7 %}
 
 Now you can install it (as root):
 ``
