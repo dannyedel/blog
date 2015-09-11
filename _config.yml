@@ -1,10 +1,16 @@
 # Site settings
-title: My Blog
+title: My Notepad
 email: mail@danny-edel.de
-description: "Some things I don't want to forget. Mainly of use for myself."
+description: "Things I don't want to forget. This is for my personal use, and not meant as a public service."
 url: "http://blog.danny-edel.de"
 twitter_username:
 github_username:  dannyedel
+author:
+    - name: Danny Edel
+    - email: mail@danny-edel.de
+
+gems:
+  - jekyll-feed
 
 exclude:
   - vendor
@@ -25,7 +31,7 @@ highlighter: pygments
 
 # mimick github
 # fixed
-safe: true
+#safe: true
 lsi: false
 source: .
 
