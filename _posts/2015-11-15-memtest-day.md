@@ -76,7 +76,7 @@ When the installation is finished,
 	the freshly installed kernel doesn't know about the defective RAM yet.
 
 
-## Step 3: Tell new grub/ combo about the defective RAM
+## Step 3: Tell new grub/Linux combo about the defective RAM
 
 GRUB2 can be fed a BadRAM pattern, which it will write to the `e820` BIOS map,
 	which gets honored *both* by the Linux Kernel and memtest86+.
