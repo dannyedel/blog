@@ -12,6 +12,8 @@ default hides the countdown to tell me when.
 * Shows Ubuntu splash screen
 * No deprecated configuration warnings
 
+`/etc/default/grub`:
+
 ```bash
 # change these
 GRUB_DEFAULT=0
@@ -25,3 +27,4 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 GRUB_CMDLINE_LINUX=""
 ```
 
+run `update-grub` and reboot
