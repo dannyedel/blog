@@ -28,3 +28,17 @@ GRUB_CMDLINE_LINUX=""
 ```
 
 run `update-grub` and reboot
+
+## Workstation (Debian, poweruser)
+
+* Doesn't get rebooted often, 5 secs wait is okay
+* I like seeing messages so I know I havn't broken it yet
+* Adds kernel parameters to enable Docker's memory and swap limiting
+
+```bash
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT=""
+GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1 verbose"
+```
