@@ -1,5 +1,5 @@
 # bundle's installed binaries
-vendor/
+vendor
 
 # jekyll's output
 _site/
