@@ -146,3 +146,15 @@ This ensures that all suites with forward-secrecy
 get preferred, but still allows IE8/XP to connect.
 
 IE8/XP will use a 3DES (112 bit) stream cipher.
+
+## Disabling 3DES 112bit
+
+If you don't need 3DES,
+you can always append `:!3DES` to the end of the list.
+
+To my knowledge,
+attacks on 3DES are not a problem yet,
+so you don't have to remove it,
+but if you don't like having 112 bit (as opposed to 128)
+as the minimum supported cipher length,
+it's your choice.
