@@ -11,6 +11,7 @@ author:
 
 gems:
   - jekyll-feed
+  - jekyll-gist
 
 exclude:
   - vendor
@@ -21,17 +22,13 @@ exclude:
 permalink: pretty
 
 # make as github-ish as possible
-markdown: redcarpet
-redcarpet:
-  extensions:
-    - autolink
-    - with_toc_data
+markdown: kramdown
+kramdown:
+    input: GFM
+    hard_wrap: false
+    syntax_highlighter_opts:
+        line_numbers: false
 
-highlighter: pygments
-
-# mimick github
-# fixed
-#safe: true
 lsi: false
 source: .
 
