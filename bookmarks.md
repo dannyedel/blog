@@ -3,8 +3,6 @@ layout: page
 title: Bookmarks
 ---
 
-Stuff I find myself loading often
-
 * [GitHub](https://github.com/session)
 * Debian
   * Tracker
@@ -18,3 +16,4 @@ Stuff I find myself loading often
   * collab-maint
 [borgbackup](https://anonscm.debian.org/cgit/collab-maint/borgbackup.git)
 [dspdfviewer](https://anonscm.debian.org/cgit/collab-maint/dspdfviewer.git)
+* [OpenSSH legacy info](http://www.openssh.com/legacy.html)
