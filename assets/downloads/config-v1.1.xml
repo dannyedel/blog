@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<clientConfig version="1.1">
+	<emailProvider id="danny-edel.de">
+		<domain>danny-edel.de</domain>
+
+		<displayName>Danny Edel</displayName>
+		<displayShortName>Danny Edel</displayShortName>
+
+		<incomingServer type="imap">
+			<hostname>mail.code-worms.com</hostname>
+			<port>993</port>
+			<socketType>SSL</socketType>
+			<username>edel_danny</username>
+			<authentication>plain</authentication>
+		</incomingServer>
+
+		<outgoingServer type="smtp">
+			<hostname>mail.code-worms.com</hostname>
+			<port>587</port>
+			<socketType>STARTTLS</socketType>
+			<username>edel_danny</username>
+			<authentication>plain</authentication>
+		</outgoingServer>
+
+	</emailProvider>
+
+</clientConfig>
