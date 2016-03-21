@@ -23,7 +23,7 @@ GRUB_TIMEOUT=0 # prevents deprecation warning
 
 # these should be default anyway
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash net.ifnames=0"
 GRUB_CMDLINE_LINUX=""
 ```
 
@@ -40,5 +40,8 @@ GRUB_DEFAULT=0
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
 GRUB_CMDLINE_LINUX_DEFAULT=""
-GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1 verbose"
+GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1 net.ifnames=0 verbose"
 ```
+
+-----
+edit 2016-03-21: Appended `net.ifnames=0`.
