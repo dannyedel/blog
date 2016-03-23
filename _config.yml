@@ -6,8 +6,8 @@ url: "http://blog.danny-edel.de"
 twitter_username:
 github_username:  dannyedel
 author:
-    - name: Danny Edel
-    - email: mail@danny-edel.de
+    name: Danny Edel
+    email: mail@danny-edel.de
 
 gems:
   - jekyll-feed
