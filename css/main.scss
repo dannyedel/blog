@@ -1,0 +1,99 @@
+---
+---
+
+$line-length: 35em;
+$line-height: 1.5em;
+$article-font: serif;
+
+div.wrap {
+	max-width: $line-length;
+	/* Center this div */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.clear {
+	clear: both;
+}
+
+header.site-header {
+	a.site-title {
+		display: block;
+		float: left;
+	}
+	nav.site-nav {
+		display: block;
+		float: right;
+	}
+	&:after{
+		display: block;
+		clear: both;
+		content: '';
+	}
+}
+
+article {
+	header {
+		div.post-meta {
+			text-align: right;
+		}
+	}
+
+	/* Justify and hyphenate articles by default */
+	text-align: justify;
+	hyphens: auto;
+	font-family: $article-font;
+
+	/* but don't justify headers */
+	h1, h2, h3, h4, h5, h6 {
+		text-align: left;
+	}
+
+	/* Slightly larger line-height for paragraphs */
+	p,li {
+		line-height: $line-height;
+	}
+	
+	/* Also don't try to hyphenate or justify code, since
+	   whitespace and minus will have special meaning there.
+	   */
+	p code {
+		hyphens: none;
+		text-align: left;
+		background-color: #f8f8f8;
+	}
+
+	/* Do not allow child elements to overflow */
+	* {
+		max-width: 100%;
+	}
+
+	pre {
+		/* If needed in a <pre>, show scrollbars instead */
+		overflow: auto;
+		/* Slightly spaced lines allow easier reading */
+		line-height: $line-height;
+	}
+
+	/* Include syntax-highlighting css, generate with
+	 * bundle exec rougify style github > .../_rouge.scss
+	 */
+	@import 'rouge';
+}
+
+/** Index page style */
+main nav {
+	li {
+		line-height: $line-height;
+		time {
+			display: block;
+		}
+	}
+}
+
+footer h2.footer-heading {
+	font-size: 1.2em;
+	padding-top: 1.5em;
+	border-top: 1px solid #ddd;
+	margin-top: 1.5em;
+}

@@ -6,3 +6,6 @@ _site/
 
 # vim swap files
 .*.swp
+
+# caches
+.*cache

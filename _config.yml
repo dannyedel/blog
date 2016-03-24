@@ -28,6 +28,7 @@ kramdown:
     hard_wrap: false
     syntax_highlighter_opts:
         line_numbers: false
+        class: hll
 
 lsi: false
 source: .
