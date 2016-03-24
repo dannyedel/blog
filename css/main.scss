@@ -33,6 +33,11 @@ header.site-header {
 }
 
 article {
+	header {
+		div.post-meta {
+			text-align: right;
+		}
+	}
 
 	/* Justify and hyphenate articles by default */
 	text-align: justify;
