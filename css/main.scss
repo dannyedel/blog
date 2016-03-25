@@ -67,6 +67,12 @@ article {
 	hyphens: auto;
 	font-family: $article-font;
 
+	.small {
+		font-size: 75%;
+		/* force re-calculation of line-height */
+		line-height: $line-height;
+	}
+
 	/* but don't justify headers */
 	h1, h2, h3, h4, h5, h6 {
 		text-align: left;
