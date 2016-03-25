@@ -39,6 +39,29 @@ article {
 		}
 	}
 
+	ul#markdown-toc {
+		max-width: 35%;
+		float: right;
+		font-size: 0.75em;
+		text-align: left;
+		line-height: 1.25em;
+		padding-left: 1em;
+		li {
+			ul {
+				padding-left: 1em;
+			}
+			list-style: none;
+			padding-top: 0.1em;
+			padding-bottom: 0.1em;
+			a {
+				text-decoration: none;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
 	/* Justify and hyphenate articles by default */
 	text-align: justify;
 	hyphens: auto;
