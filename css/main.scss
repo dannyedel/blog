@@ -78,10 +78,8 @@ article {
 		text-align: left;
 	}
 
-	/* Slightly larger line-height for paragraphs */
-	p,li {
-		line-height: $line-height;
-	}
+	/* Slightly larger line-height */
+	line-height: $line-height;
 	
 	/* Also don't try to hyphenate or justify code, since
 	   whitespace and minus will have special meaning there.
@@ -100,8 +98,6 @@ article {
 	pre {
 		/* If needed in a <pre>, show scrollbars instead */
 		overflow: auto;
-		/* Slightly spaced lines allow easier reading */
-		line-height: $line-height;
 	}
 
 	/* Include syntax-highlighting css, generate with
