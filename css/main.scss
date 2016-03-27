@@ -84,6 +84,12 @@ article {
 		overflow: auto;
 	}
 
+	hr {
+		border: 0;
+		height: 1px;
+		background-color: #ccc;
+	}
+
 	h2, h3, h4, h5, h6 {
 		line-height: $line-height;
 	}
