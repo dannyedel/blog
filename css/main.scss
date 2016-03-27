@@ -70,7 +70,7 @@ article {
 			float: right;
 			vertical-align: text-bottom;
 			text-align: right;
-			padding: 0.9em;
+			padding-top: 0.9em;
 			font-size: 0.9em;
 			&:after {
 				display: block;
@@ -82,6 +82,7 @@ article {
 		border-bottom: 1px solid #ddd;
 		margin-bottom: 1em;
 		counter-reset: section;
+		overflow: auto;
 	}
 
 	h2, h3, h4, h5, h6 {
