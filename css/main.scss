@@ -84,6 +84,10 @@ article {
 		counter-reset: section;
 	}
 
+	h2, h3, h4, h5, h6 {
+		line-height: $line-height;
+	}
+
 	h2:before {  // h2: section
 		counter-reset: subsection;
 		counter-increment: section;
