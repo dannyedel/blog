@@ -17,6 +17,25 @@ body {
 	clear: both;
 }
 
+ul, ol {
+	padding-left: 2em;
+}
+
+dl {
+	dt {
+		font-weight: bold;
+		width: 100%;
+	}
+	dd {
+		margin-left: 1em;
+		& > ul,
+		& > ol
+		{
+			padding-left: 1.5em;
+		}
+	}
+}
+
 header.site-header {
 	a.site-title {
 		display: block;
