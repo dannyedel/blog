@@ -54,9 +54,45 @@ header.site-header {
 
 article {
 	header {
+		h1 {
+			margin: 0;
+			line-height: 1.5em;
+			padding: 0;
+			&:before {
+				content: '';
+				display: block;
+				padding-top: 1em;
+				margin-top: 1em;
+			}
+		}
 		div.post-meta {
 			text-align: right;
+			font-size: 0.9em;
 		}
+		padding-bottom: 0.4em;
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 1em;
+		counter-reset: section;
+	}
+
+	h2:before {  // h2: section
+		counter-reset: subsection;
+		counter-increment: section;
+		content: counter(section, decimal) ". ";
+	}
+
+	h3:before {  // h3: subsection
+		counter-reset: subsubsection;
+		counter-increment: subsection;
+		content: counter(section, decimal) "."
+		 counter(subsection, decimal) ". ";
+	}
+
+	h4:before { // h4: subsubsection
+		counter-increment: subsubsection;
+		content: counter(section,decimal) "."
+		 counter(subsection,decimal) "."
+		 counter(subsubsection,decimal) ". ";
 	}
 
 	ul#markdown-toc {
