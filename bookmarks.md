@@ -17,3 +17,4 @@ title: Bookmarks
 [borgbackup](https://anonscm.debian.org/cgit/collab-maint/borgbackup.git)
 [dspdfviewer](https://anonscm.debian.org/cgit/collab-maint/dspdfviewer.git)
 * [OpenSSH legacy info](http://www.openssh.com/legacy.html)
+* [Simple IPv4/IPv6 Test](http://test-ipv6.com/simple_test.html)
