@@ -1,7 +1,10 @@
 <meta charset="utf-8" />
 <title>{{ page.title | default:site.name }}</title>
-<meta name="description" content="{{ site.description }}">
-<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+{% if page.excerpt %}
+	<meta name="description" content="{{ page.excerpt | strip_html | strip }}" />
+{% elsif site.description %}
+	<meta name="description" content="{{ site.description | strip_html | strip }}" />
+{% endif %}
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 {% feed_meta %}
-<!-- Custom CSS -->
 <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" />
