@@ -5,11 +5,12 @@ $line-length: 35em;
 $line-height: 1.5em;
 $article-font: serif;
 
-div.wrap {
+body {
 	max-width: $line-length;
 	/* Center this div */
 	margin-left: auto;
 	margin-right: auto;
+	padding: 1em;
 }
 
 .clear {
