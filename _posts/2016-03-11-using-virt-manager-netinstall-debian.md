@@ -12,6 +12,7 @@ Install from de mirror:
 
 ```
 http://ftp.de.debian.org/debian/dists/stable/main/installer-i386/
+http://ftp2.de.debian.org/debian/dists/jessie/main/installer-amd64/
 ```
 
 Install from my local apt-cacher-ng:
@@ -28,3 +29,19 @@ priority=low
 ```
 
 in order to be asked all the questions (equivalent to *expert mode* on the ISO).
+
+Alternatively,
+
+```
+auto=true priority=critical url=autoinstall.server.simon-mueller.de
+```
+
+for our basic VM provisioning.
+
+
+-----
+
+Updates 2016-04-17:
+
+* Add ftp2 (ipv6 enabled) mirror with amd64
+* Add string for VM provisioning
