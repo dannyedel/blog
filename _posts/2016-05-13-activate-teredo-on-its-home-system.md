@@ -6,7 +6,7 @@ Just for comparison, on Debian and derivates the
 equivalent of this whole article is three words:
 
 ```bash
-apt instell miredo
+apt install miredo
 ```
 
 And voila, you can access IPv6-only hosts from a
