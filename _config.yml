@@ -12,6 +12,9 @@ author:
 gems:
   - jekyll-feed
   - jekyll-gist
+  - jekyll-paginate
+
+paginate: 5
 
 exclude:
   - vendor

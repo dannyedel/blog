@@ -5,13 +5,34 @@ layout: default
 <nav>
 	<header><h1>Posts</h1></header>
 	<ul class="posts">
-	{% for post in site.posts %}
+	{% for post in paginator.posts %}
 		<li>
 			<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
 			<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 		</li>
 	{% endfor %}
 	</ul>
+	{% if paginator.previous_page or paginator.next_page %}
+	<ul class="pages">
+		<li class="previous">
+			{% if paginator.previous_page %}
+				<a href="{{paginator.previous_page_path}}">
+					Newer posts
+				</a>
+			{% endif %}
+		</li>
+		<li>
+			Page {{paginator.page}} of {{paginator.total_pages}}
+		</li>
+		<li class="next">
+			{% if paginator.next_page %}
+				<a href="{{paginator.next_page_path}}">
+					Older posts
+				</a>
+			{% endif %}
+		</li>
+	</ul>
+	{% endif %}
 </nav>
 <p class="rss-subscribe">subscribe
 	<a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
