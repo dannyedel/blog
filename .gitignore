@@ -1,3 +1,5 @@
+# bundle's configuration
+.bundle
 # bundle's installed binaries
 vendor
 
