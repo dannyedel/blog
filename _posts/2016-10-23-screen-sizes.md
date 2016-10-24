@@ -41,6 +41,9 @@ and "too small for my taste" lies exactly.
 * My secondary screen
   * 5:4, 1280x1024, marketed as 19" diagonal
   * 1280px @ 377mm == 86dpi
+* My old laptop (asus A3HF)
+  * 4:3, 1024x768, marketed as 15" diagonal
+  * 1024px @ 304mm horiz. == 75dpi
 
 ## DPI Calculation
 
