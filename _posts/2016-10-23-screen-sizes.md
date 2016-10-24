@@ -25,7 +25,6 @@ and "too small for my taste" lies exactly.
 
 * A friend's laptop
   * 16.9, 1920x1080, marketed as 15.6" diagonal
-  * 345mm horizontal measured,
   * 1920px @ 345mm == 141dpi
 
 ## tolerable
