@@ -29,6 +29,9 @@ and "too small for my taste" lies exactly.
 
 ## tolerable
 
+* My backup secondary screen
+  * 5:4, 1280x1024, marketed as 17"
+  * 1280px @ 337mm == 96dpi
 * My trusty SyncMaster 245B+
   * 16:10, 1920x1200, marketed as 24" diagonal
   * 1920px @ 518mm horiz. == 94dpi
