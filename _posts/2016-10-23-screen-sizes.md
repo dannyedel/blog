@@ -10,23 +10,25 @@ My workload mostly consists of (source) text, so having a screen
 that is able to render images at or above my eyes' resolution
 is pointless for me.
 
-In my experience, too many programs do not yet scale
+In my experience, too many programs do not yet work
 well on high-dpi screens, generally resulting in really tiny
-letters that are a pain to work with.
+letters that are a pain to work with,
+or they scale rendered bitmaps,
+resulting in blurred on-screen images.
 So generally I prefer low-dpi screens.
 
 I will update this post with data I gather from screens
 empirically, to figure out where the threshold beween "okay"
 and "too small for my taste" lies exactly.
 
-## too small
+## too small to read on
 
-* Some laptop
+* A friend's laptop
   * 16.9, 1920x1080, marketed as 15.6" diagonal
   * 345mm horizontal measured,
   * 1920px @ 345mm == 141dpi
 
-## OK
+## tolerable
 
 * My trusty SyncMaster 245B+
   * 16:10, 1920x1200, marketed as 24" diagonal
@@ -50,6 +52,10 @@ see if there is any difference.
 dpi [px/inch] = imageWidth [px] / width [mm] * 25.4 [mm/inch]
 ```
 
+### Guessing DPI
+
+For a screen without actual measurements, such as one viewed
+in a catalog, one has to guess the DPI if it is not given.
 Formula for approximate DPI, based on marketed diagonal size,
 and aspect ratio, again assuming square pixels:
 
