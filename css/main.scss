@@ -110,24 +110,35 @@ article {
 		line-height: $line-height;
 	}
 
-	h2:before {  // h2: section
+	h1 {
+		counter-reset: section;
+	}
+
+	h2 {  // h2: section
 		counter-reset: subsection;
 		counter-increment: section;
-		content: counter(section, decimal) ". ";
+		&::before {
+			content: counter(section, decimal) ". ";
+		}
 	}
 
-	h3:before {  // h3: subsection
+	h3 {
+		// h3: subsection
 		counter-reset: subsubsection;
 		counter-increment: subsection;
-		content: counter(section, decimal) "."
-		 counter(subsection, decimal) ". ";
+		&::before {
+			content: counter(section, decimal) "."
+			 counter(subsection, decimal) ". ";
+		}
 	}
 
-	h4:before { // h4: subsubsection
+	h4 { // h4: subsubsection
 		counter-increment: subsubsection;
-		content: counter(section,decimal) "."
-		 counter(subsection,decimal) "."
-		 counter(subsubsection,decimal) ". ";
+		&::before{
+			content: counter(section,decimal) "."
+			 counter(subsection,decimal) "."
+			 counter(subsubsection,decimal) ". ";
+		}
 	}
 
 	ul#markdown-toc {
