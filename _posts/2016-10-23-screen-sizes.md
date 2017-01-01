@@ -24,10 +24,16 @@ and "too small for my taste" lies exactly.
 ## too small to read on
 
 * A friend's laptop
-  * 16.9, 1920x1080, marketed as 15.6" diagonal
+  * 16:9, 1920x1080, marketed as 15.6" diagonal
   * 1920px @ 345mm == 141dpi
 
-## tolerable
+## tolerable on short (laptop) viewing distance
+
+* My current laptop
+  * 16:10, 1440x900, marketed as 17"
+  * 1440px @ 367mm == 100dpi
+
+## tolerable on normal (desktop) viewing distance
 
 * My backup secondary screen
   * 5:4, 1280x1024, marketed as 17"
