@@ -10,6 +10,14 @@ changes (i.e. non-clobbered path names when read on Unices)
 * `-J` (Joliet) if the disk should be readable on Windows machines
 * `-r` (Rock Ridge) if the disk should be reable on Unices
 * `-V VolumeLabel`
+* `-v` verbose
+
+Together:
+
+```
+growisofs -Z /dev/sr0 -iso-level 3 -J -r -V DiscNameGoesHere -vv \
+	/path/to/folder/containing/data/to/burn
+```
 
 For Video DVD on-the-fly burning:
 
