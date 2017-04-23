@@ -137,10 +137,12 @@ echo "MaxBuffer:   ${MAXBUFFER:=10s}"
 
 # Maximum burst (number of bytes that can go at once)
 # Don't set this smaller than the network interface MTU
-echo "Burst:       ${BURST:=1560}"
+#
+# Must be set much higher than MTU on multi-mbps links
+echo "Burst:       ${BURST:=10k}"
 
 # Maximum number of packets in netem's delay buffers
-echo "Limit:       ${LIMIT:=1024576}"
+echo "Limit:       ${LIMIT:=1000}"
 
 # Baseline latency and deviation
 # Note this is the one-way latency.
@@ -149,15 +151,8 @@ echo "Latency:     ${LATENCY:=30ms}"
 echo "LatencyDev:  ${LATENCYDEV:=10ms}"
 echo "LatencyCorr: ${LATENCYCORR:=25%}"
 
-# Add a random delay of 0.1ms +/- RANDOMDELAY
+# Add a random delay of 1ms +/- RANDOMDELAY
 echo "RandomDelay: ${RANDOMDELAY:=0ms}"
-
-# Add retransmission delay
-echo "Retransmit:  ${RETRANSMIT:=100ms}"
-# Link quality
-echo "LinkQuality: ${QUALITY:=100%}"
-# Quality correlation
-echo "QualityCorr: ${QUALITYCORR:=25%}"
 
 # Packetloss and correlation
 echo "Loss:        ${LOSS:=3%}"
@@ -186,12 +181,8 @@ tc qdisc replace dev $UPLINK root handle 1 \
     corrupt $CORRUPT
 tc qdisc replace dev $UPLINK parent 1: handle 2 \
   netem limit $LIMIT \
-    delay 0.1ms $RANDOMDELAY
+    delay 1ms $RANDOMDELAY
 tc qdisc replace dev $UPLINK parent 2: handle 3 \
-  netem limit $LIMIT \
-    delay $RETRANSMIT \
-    reorder $QUALITY $QUALITYCORR
-tc qdisc replace dev $UPLINK parent 3: handle 4 \
   tbf \
     rate $UPSTREAM \
     burst $BURST \
@@ -206,6 +197,9 @@ tc qdisc replace dev $DOWNLINK root handle 1 \
     duplicate $DUPLICATE \
     corrupt $CORRUPT
 tc qdisc replace dev $DOWNLINK parent 1: handle 2 \
+  netem limit $LIMIT \
+    delay 1ms $RANDOMDELAY
+tc qdisc replace dev $DOWNLINK parent 2: handle 3 \
   tbf \
     rate $DOWNSTREAM \
     burst $BURST \
@@ -261,7 +255,9 @@ Now lets emulate retransmissions using random variations in delay
 ```bash
 MAXBUFFER=0.3s LOSS=0.1% LOSSCORR=25% \
   UPSTREAM=50mbit DOWNSTREAM=50mbit \
-  LATENCY=50ms LATENCYDEV=50ms LATENCYCORR=0% ./netem.sh
+  LATENCY=50ms LATENCYDEV=5ms LATENCYCORR=0% \
+  RANDOMDELAY=50ms \
+  ./netem.sh
 ```
 
 If you run iperf3, you will see how Linux slowly turns up the window
