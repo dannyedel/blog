@@ -328,7 +328,7 @@ connection, that reminds of how a 56k modem actually felt.
 ```bash
 MAXBUFFER=0.1s LOSS=0.1% LOSSCORR=0% \
   DUPLICATE=0.1% CORRUPT=0.5% \
-  UPSTREAM=56kbit DOWNSTREAM=56kbit LIMIT=100 \
+  UPSTREAM=56kbit DOWNSTREAM=56kbit \
   LATENCY=20ms LATENCYDEV=3ms LATENCYCORR=75% \
   ./netem.sh
 ```
