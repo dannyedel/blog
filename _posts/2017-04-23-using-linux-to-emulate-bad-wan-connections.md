@@ -149,6 +149,16 @@ echo "Latency:     ${LATENCY:=30ms}"
 echo "LatencyDev:  ${LATENCYDEV:=10ms}"
 echo "LatencyCorr: ${LATENCYCORR:=25%}"
 
+# Add a random delay of 0.1ms +/- RANDOMDELAY
+echo "RandomDelay: ${RANDOMDELAY:=0ms}"
+
+# Add retransmission delay
+echo "Retransmit:  ${RETRANSMIT:=100ms}"
+# Link quality
+echo "LinkQuality: ${QUALITY:=100%}"
+# Quality correlation
+echo "QualityCorr: ${QUALITYCORR:=25%}"
+
 # Packetloss and correlation
 echo "Loss:        ${LOSS:=3%}"
 echo "LossCorr:    ${LOSSCORR:=75%}"
@@ -175,6 +185,13 @@ tc qdisc replace dev $UPLINK root handle 1 \
     duplicate $DUPLICATE \
     corrupt $CORRUPT
 tc qdisc replace dev $UPLINK parent 1: handle 2 \
+  netem limit $LIMIT \
+    delay 0.1ms $RANDOMDELAY
+tc qdisc replace dev $UPLINK parent 2: handle 3 \
+  netem limit $LIMIT \
+    delay $RETRANSMIT \
+    reorder $QUALITY $QUALITYCORR
+tc qdisc replace dev $UPLINK parent 3: handle 4 \
   tbf \
     rate $UPSTREAM \
     burst $BURST \
