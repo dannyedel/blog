@@ -5,6 +5,7 @@ vendor
 
 # jekyll's output
 _site/
+.jekyll-metadata
 
 # vim swap files
 .*.swp
