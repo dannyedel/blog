@@ -137,10 +137,12 @@ echo "MaxBuffer:   ${MAXBUFFER:=10s}"
 
 # Maximum burst (number of bytes that can go at once)
 # Don't set this smaller than the network interface MTU
-echo "Burst:       ${BURST:=1560}"
+#
+# Must be set much higher than MTU on multi-mbps links
+echo "Burst:       ${BURST:=10k}"
 
 # Maximum number of packets in netem's delay buffers
-echo "Limit:       ${LIMIT:=1024576}"
+echo "Limit:       ${LIMIT:=1000}"
 
 # Baseline latency and deviation
 # Note this is the one-way latency.
