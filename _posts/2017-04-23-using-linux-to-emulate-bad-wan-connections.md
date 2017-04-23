@@ -332,7 +332,7 @@ MAXBUFFER=0.1s LOSS=0.1% LOSSCORR=0% \
   DUPLICATE=0.1% CORRUPT=0.5% \
   UPSTREAM=56kbit DOWNSTREAM=56kbit \
   LATENCY=20ms LATENCYDEV=3ms LATENCYCORR=75% \
-  ./netem.sh
+  BURST=1560 ./netem.sh
 ```
 
 ### Realistic ADSL VPN link
