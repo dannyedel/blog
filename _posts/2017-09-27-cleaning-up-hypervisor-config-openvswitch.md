@@ -17,6 +17,19 @@ auto bridge123
 iface bridge123 inet manual
 	bridge-ports vlan123
 	bridge-fd 0
+
+
+auto vlan124
+iface vlan124 inet manual
+	vlan_raw_device eth0
+
+auto bridge124
+iface bridge124 inet manual
+	bridge-ports vlan124
+	bridge-fd 0
+
+
+auto vlan125...
 ```
 
 And so on for every VLAN my VMs were allowed to connect to.
