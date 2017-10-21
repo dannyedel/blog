@@ -32,6 +32,17 @@ Make sure the path chosen is not readable by another user.
 
 -----
 
+**Update 2017-10-21: Availability of %C**
+
+I was notified that `%C` may not be available on all openssh versions.
+
+According to my research, it was added in [version 6.7][ch67], which
+is included since Debian jessie, but was not in wheezy.
+
+[ch67]: https://www.openssh.com/txt/release-6.7
+
+-----
+
 ## How effective is it?
 
 As an example of the low-cpu category, I'll run the "date" command
