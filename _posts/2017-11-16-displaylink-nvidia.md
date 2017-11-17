@@ -301,7 +301,7 @@ like having even more space to run terminals on.
 However, I wouldn't recommend playing openarena over USB2.0.
 
 While the application says that I have 60fps, the real framerate feels
-much closer to the (expected, see above) 15fps.
+much closer to the expected (see above) 15fps.
 
 Apparently, the frame skipping is hidden from the application, but
 otherwise well implemented.
