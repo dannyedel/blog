@@ -50,7 +50,6 @@ here's my `/etc/unbound/unbound.conf.d/speed-and-validate.conf`:
 ```text
 server:
 	prefetch: yes
-	serve-expired: yes
 	verbosity: 1
 	harden-below-nxdomain: yes
 	val-log-level: 2
