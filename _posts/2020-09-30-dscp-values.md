@@ -10,11 +10,13 @@ Also, this shows the resulting 802.1p Class of Service
 and WMM priority, assuming a "dumb" mapping from
 the highest 3 bits of DSCP.
 
+Sources: [DSCP][dscp] [802.1p][1p] [WMM][wmm]
+
 
 | DSCP | name | IP TOS | 802.1p | WMM    | prio |
 | ---- | ---- | ------ | ------ | ------ | ---- |
 | 0    | CS0  | 0      | 0 (BE) | AC_BE  | 1    |
-| 1    |      | 4      | 0      | AC_BE  | 1    |
+| 1    | LE   | 4      | 0      | AC_BE  | 1    |
 | 2    |      | 8      | 0      | AC_BE  | 1    |
 | 3    |      | 12     | 0      | AC_BE  | 1    |
 | 4    |      | 16     | 0      | AC_BE  | 1    |
@@ -77,3 +79,7 @@ the highest 3 bits of DSCP.
 | 61   |      | 244    | 7      | AC_VO  | 7    |
 | 62   |      | 248    | 7      | AC_VO  | 7    |
 | 63   |      | 252    | 7      | AC_VO  | 7    |
+
+[dscp]: https://www.iana.org/assignments/dscp-registry/dscp-registry.xhtml
+[1p]: https://en.wikipedia.org/wiki/IEEE_P802.1p
+[wmm]: https://en.wikipedia.org/wiki/IEEE_802.11e-2005#Enhanced_distributed_channel_access_(EDCA)
